@@ -4,7 +4,9 @@
 <pre>
 <?php
 echo system("./loadavg.sh");
-echo system("top -b -n 1 | head -n15");
+echo system("./iostat.sh");
+echo system("./cpuLoad.sh")
+#echo system("top -b -n 1 | head -n15");
 ?>
 </pre>
 

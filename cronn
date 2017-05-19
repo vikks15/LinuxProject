@@ -1,1 +1,1 @@
-* * * * * echo "world" | wall
+* * * * * iostat -d | head -7 | tail -5 > /var/www/html/sysinfo/iorec
