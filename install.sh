@@ -1,6 +1,12 @@
 #!/bin/bash
 
-echo "hello"
+#echo "hello"
+
+#dir check
+if [ $0 = "./LinuxProject/install.sh" ]; then
+	cd LinuxProject
+fi
+
 
 #root check
 if [ "$EUID" != 0 ]
@@ -10,6 +16,7 @@ fi
 
 useradd -m myuser
 passwd -d myuser
+su -myuser
 
 echo "Starting to install"
 sudo apt install bc
@@ -20,17 +27,16 @@ systemctl stop apache2
 sudo apt install nginx
 
 echo "Starting to copy files and scripts" 
-cp cronn /home/myuser/
-cp 000-default.conf /etc/apache2/sites-enabled/
-cp default /etc/nginx/sites-enabled/
-cp ports.conf /etc/apache2/ 
-cp index.html /var/www/html/
-cp index.php /var/www/html/
-cp -R sysinfo /var/www/html/
+sudo cp cronn /home/myuser/
+sudo cp 000-default.conf /etc/apache2/sites-enabled/
+sudo cp default /etc/nginx/sites-enabled/
+sudo cp ports.conf /etc/apache2/ 
+sudo cp index.html /var/www/html/
+sudo cp index.php /var/www/html/
+sudo cp -R sysinfo /var/www/html/
 
 systemctl start apache2
 
-su - myuser
-crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
+#crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
 
 
