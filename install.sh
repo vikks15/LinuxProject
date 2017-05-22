@@ -2,6 +2,7 @@
 
 #echo "hello"
 
+dn=`dirname $0`
 #root check
 if [ "$EUID" != 0 ]
 	then echo "I need to be root"
@@ -9,14 +10,14 @@ if [ "$EUID" != 0 ]
 fi
 
 #dir check
-if [ $0 = "./LinuxProject/install.sh" ]; then
-	cd LinuxProject
+if [ $0 = "./install.sh" ]; then
+	echo "nothing"
+else cd $dn
 fi
 
 
 useradd -m myuser
 passwd -d myuser
-su - myuser
 
 echo "Starting to install"
 echo "Install bc"
