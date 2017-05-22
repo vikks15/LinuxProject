@@ -29,7 +29,10 @@ echo "Stop apache2"
 systemctl stop apache2
 
 echo "Install nginx"
-sudo apt install nginx
+sudo apt install -y nginx
+
+echo "Stop nginx"
+systemctl stop nginx
 
 echo "Starting to copy files and scripts" 
 sudo cp cronn /home/myuser/
@@ -37,8 +40,9 @@ sudo cp 000-default.conf /etc/apache2/sites-enabled/
 sudo cp default /etc/nginx/sites-enabled/
 sudo cp ports.conf /etc/apache2/
 
-echo "Start apache2"
+echo "Start apache2 and nginx"
 systemctl start apache2
+systemctl start nginx
  
 sudo cp index.html /var/www/html/
 sudo cp index.php /var/www/html/
