@@ -58,7 +58,7 @@ chown myuser /home/myuser/iostat.sh | chown myuser /home/myuser/loadavg.sh
 chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/iostPeriodic.sh
 
 touch /home/myuser/iorec | touch /home/myuser/cpurec
-chmod o+w iorec | chmod o+w cpurec
-crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
+chmod o+w /home/myuser/iorec | chmod o+w /home/myuser/cpurec
+#crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
 
 

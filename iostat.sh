@@ -1,7 +1,10 @@
 #!/bin/bash
 
-RowNum=`wc -l /home/myuser/iorec | cut -d" " -f1`
+iostat -d 1 2 > /home/myuser/iorec
 iostat -d 1 2
+
+RowNum=`wc -l /home/myuser/iorec | cut -d" " -f1`
+
 
 echo "<html>"
 echo "<head></head>"

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+iostat -c 1 2 > /home/myuser/cpurec
 iostat -c 1 2
 
 #RowLine=`wc -l /home/myuser/cpurec`

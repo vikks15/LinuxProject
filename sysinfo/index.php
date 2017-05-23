@@ -1,4 +1,5 @@
 <html>
+<head><META HTTP-EQUIV='REFRESH' CONTENT='10'></head>
 <body>
 <h1>Sysinfo</h1>
 <pre>

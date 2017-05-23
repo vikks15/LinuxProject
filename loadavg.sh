@@ -21,7 +21,7 @@ pygmentize(){
 
 #echo "Content-Type: text/html"
 echo "<html>"
-echo "<head><META HTTP-EQUIV='REFRESH' CONTENT='5'></head>"
+#echo "<head><META HTTP-EQUIV='REFRESH' CONTENT='5'></head>"
 
 echo "<h3>Load Average</h3>"
 
