@@ -1,11 +1,7 @@
 #!/bin/bash
 
-whoami
-sudo iostat -d 1 2 > /home/myuser/iorec
-echo $?
-#cat iorec
-
 RowNum=`wc -l /home/myuser/iorec | cut -d" " -f1`
+iostat -d 1 2
 
 echo "<html>"
 echo "<head></head>"
@@ -17,7 +13,7 @@ echo "<tr> <th>Devices:</th> <th>tps</th> <th>kB_read/s</th> <th>kB_wrtn/s</th> 
 #./iostPeriodic.sh
 echo "<h3>iostat -d</h3>"
 
-cat /home/myuser/iorec | tail -n `expr $RowNum / 2` | tail -n +3 | head -n 4 | while IFS=' ' read -r -a arr; do
+cat /home/myuser/iorec | tail -n `expr $RowNum / 2` | tail -n +3 | head -n 3 | while IFS=' ' read -r -a arr; do
 	echo "<tr>"
 		for i in  0 1 2 3 4 5
 		do

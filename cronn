@@ -1,1 +1,7 @@
-* * * * * iostat -d | head -7 | tail -5 > /var/www/html/sysinfo/iorec
+* * * * * iostat -d 1 2 > /home/myuser/iorec
+* * * * * (sleep 10; iostat -d 1 2 > /home/myuser/iorec;)
+
+* * * * * iostat -c 1 2 > /home/myuser/cpurec
+* * * * * (sleep 10; iostat -d 1 2 > /home/myuser/cpurec;)
+
+

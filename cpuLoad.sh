@@ -1,10 +1,8 @@
 #!/bin/bash
-#iostat -c | tail -2 | head -1 > cpurec
 
-iostat -c
-#cat cpurec
+iostat -c 1 2
 
-RowLine=`wc -l /home/myuser/cpurec`
+#RowLine=`wc -l /home/myuser/cpurec`
 echo "<html>"
 echo "<head></head>"
 

@@ -54,7 +54,11 @@ sudo cp cpuLoad.sh /home/myuser/
 sudo cp iostat.sh /home/myuser/
 sudo cp loadavg.sh /home/myuser/
 
+chown myuser /home/myuser/iostat.sh | chown myuser /home/myuser/loadavg.sh
+chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/iostPeriodic.sh
 
-#crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
+touch /home/myuser/iorec | touch /home/myuser/cpurec
+chmod o+w iorec | chmod o+w cpurec
+crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
 
 
