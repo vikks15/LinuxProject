@@ -4,6 +4,15 @@
 <h1>Sysinfo</h1>
 <pre>
 <?php
+$hdr = getallheaders();
+$proxys = $hdr['X-NGX-VERSION'];
+$client = $hdr['X-Real-IP'].":".$hdr['X-Real-Port'];
+$redirc = $_SERVER['REMOTE_ADDR'].":".$_SERVER['REMOTE_PORT'];
+
+echo "<tr><td> nginx:</td><td>" .$proxys. "</td></tr><br>";
+echo "<tr><td>client (nginx side):</td><td>".$client."</td></tr><br>";
+echo "<tr><td>client (apache side):</td> <td>".$redirc."</td></tr><br>";
+
 echo system("/./home/myuser/loadavg.sh");
 echo system("/./home/myuser/iostat.sh");
 echo system("/./home/myuser/cpuLoad.sh");

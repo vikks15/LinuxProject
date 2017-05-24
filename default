@@ -1,22 +1,19 @@
 # File: /etc/nginx/sites-enabled/default
 server {
 	listen *:80;
-	#listen [::]:80 default_server;
-
-	# SSL configuration
-	#
-	# listen 443 ssl default_server;
-	# listen [::]:443 ssl default_server;
-
 	root /var/www/html;
-
-	# Add index.php to the list if you are using PHP
-	index index.html index.htm index.nginx-debian.html;
 
 	server_name _;
 
 	location / {
 	proxy_pass http://127.0.0.1:8080/;
+
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Real-Port $remote_port;
+	
+	set $fsaddr "version ${nginx_version}";	
+	proxy_set_header X-NGX-VERSION $fsaddr;
+
 	#proxy_set_header Host $host;
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
