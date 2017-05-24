@@ -67,5 +67,5 @@ chmod o+w /home/myuser/iorec | chmod o+w /home/myuser/cpurec
 touch /home/myuser/inoderec | touch /home/myuser/itemp
 chmod o+w /home/myuser/inoderec | chmod o+w /home/myuser/itemp
 
-touch ssrec
-chmod o+w ssrec
+touch /home/myuser/ssrec
+chmod o+w /home/myuser/ssrec
