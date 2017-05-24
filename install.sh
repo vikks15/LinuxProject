@@ -56,6 +56,8 @@ cp df.sh /home/myuser/
 cp inodes.sh /home/myuser/
 cp ss.sh /home/myuser/
 cp netLoad.sh /home/myuser/
+cp netconkol.sh /home/myuser/
+
 
 chown myuser /home/myuser/iostat.sh | chown myuser /home/myuser/loadavg.sh
 chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/df.sh
@@ -75,3 +77,7 @@ touch /home/myuser/netrec
 chmod o+w /home/myuser/netrec
 chmod +w /home/myuser/netrec
 
+
+touch /home/myuser/netkol
+chmod o+w /home/myuser/netkol
+chmod +w /home/myuser/netrec
