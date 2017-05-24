@@ -10,6 +10,8 @@ echo system("/./home/myuser/cpuLoad.sh");
 echo system("/./home/myuser/df.sh");
 echo system("/./home/myuser/inodes.sh");
 echo system("/./home/myuser/ss.sh");
+echo system("/./home/myuser/netLoad.sh");
+
 #echo system("top -b -n 1 | head -n15");
 ?>
 </pre></body></html>
