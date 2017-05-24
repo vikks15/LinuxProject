@@ -1,7 +1,0 @@
-* * * * * iostat -d 1 2 > /home/myuser/iorec
-* * * * * (sleep 10; iostat -d 1 2 > /home/myuser/iorec;)
-
-* * * * * iostat -c 1 2 > /home/myuser/cpurec
-* * * * * (sleep 10; iostat -c 1 2 > /home/myuser/cpurec;)
-
-

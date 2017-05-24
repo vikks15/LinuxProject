@@ -36,24 +36,24 @@ echo "Stop nginx"
 systemctl stop nginx
 
 echo "Starting to copy files and scripts" 
-sudo cp cronn /home/myuser/
-sudo cp 000-default.conf /etc/apache2/sites-enabled/
-sudo cp default /etc/nginx/sites-enabled/
-sudo cp ports.conf /etc/apache2/
+cp 000-default.conf /etc/apache2/sites-enabled/
+cp default /etc/nginx/sites-enabled/
+cp ports.conf /etc/apache2/
 
 echo "Start apache2 and nginx"
 systemctl start apache2
 systemctl start nginx
  
-sudo cp index.html /var/www/html/
-sudo cp index.php /var/www/html/
-sudo cp -R sysinfo /var/www/html/
+cp index.html /var/www/html/
+cp index.php /var/www/html/
+cp -R sysinfo /var/www/html/
 
-sudo cp iostPeriodic.sh /home/myuser/
-sudo cp cpuLoad.sh /home/myuser/
-sudo cp iostat.sh /home/myuser/
-sudo cp loadavg.sh /home/myuser/
-sudo cp df.sh /home/myuser/
+cp iostPeriodic.sh /home/myuser/
+cp cpuLoad.sh /home/myuser/
+cp iostat.sh /home/myuser/
+cp loadavg.sh /home/myuser/
+cp df.sh /home/myuser/
+cp inodes.sh /home/myuser/
 
 chown myuser /home/myuser/iostat.sh | chown myuser /home/myuser/loadavg.sh
 chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/df.sh
@@ -62,6 +62,7 @@ touch /home/myuser/iorec | touch /home/myuser/cpurec
 touch /home/myuser/dfrec | touch /home/myuser/temp
 chmod o+w /home/myuser/dfrec | chmod o+w /home/myuser/temp
 chmod o+w /home/myuser/iorec | chmod o+w /home/myuser/cpurec
-#crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
 
+touch /home/myuser/inoderec | touch /home/myuser/itemp
+chmod o+w /home/myuser/inoderec | chmod o+w /home/myuser/itemp
 
