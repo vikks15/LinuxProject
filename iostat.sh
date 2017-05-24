@@ -4,11 +4,8 @@ iostat -d 1 2 > /home/myuser/iorec
 iostat -d 1 2
 
 RowNum=`wc -l /home/myuser/iorec | cut -d" " -f1`
-
-
 echo "<html>"
 echo "<head></head>"
-
 echo "<body><table border=1 width=100%>"
 echo "<tr> <th>Devices:</th> <th>tps</th> <th>kB_read/s</th> <th>kB_wrtn/s</th> <th>kB_read</th> <th>kB_wrtn</th> </tr>"
 
@@ -24,6 +21,6 @@ cat /home/myuser/iorec | tail -n `expr $RowNum / 2` | tail -n +3 | head -n 3 | w
 		done
 	echo "</tr>"
 	done
-
+echo "</table>"
 echo "</body>"
 echo "</html>"

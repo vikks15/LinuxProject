@@ -5,7 +5,7 @@ iostat -c 1 2
 
 #RowLine=`wc -l /home/myuser/cpurec`
 echo "<html>"
-echo "<head></head>"
+#echo "<head></head>"
 
 echo "<body><table border=1 width=100%>"
 echo "<tr> <th>avg-cpu:</th> <th>%user+%nice</th> <th>%system</th> <th>%iowait</th> <th>%idle</th> </tr>"
