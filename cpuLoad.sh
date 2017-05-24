@@ -1,7 +1,7 @@
 #!/bin/bash
 
 iostat -c 1 2 > /home/myuser/cpurec
-iostat -c 1 2
+#iostat -c 1 2
 
 #RowLine=`wc -l /home/myuser/cpurec`
 echo "<html>"
@@ -9,10 +9,7 @@ echo "<html>"
 
 echo "<body><table border=1 width=100%>"
 echo "<tr> <th>avg-cpu:</th> <th>%user+%nice</th> <th>%system</th> <th>%iowait</th> <th>%idle</th> </tr>"
-
-#iostat -c | tail -2 | head -1 > iorec
-echo "<h3>iostat -c</h3>"
-
+echo "<h3>CPU load (iostat -c)</h3>"
 echo "<tr>"
 
 cat /home/myuser/cpurec | tail -n 4 | tail -n +3 | head -n 1 | while IFS=' ' read -r -a arr; do

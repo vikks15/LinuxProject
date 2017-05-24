@@ -54,6 +54,7 @@ cp iostat.sh /home/myuser/
 cp loadavg.sh /home/myuser/
 cp df.sh /home/myuser/
 cp inodes.sh /home/myuser/
+cp ss.sh /home/myuser/
 
 chown myuser /home/myuser/iostat.sh | chown myuser /home/myuser/loadavg.sh
 chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/df.sh
@@ -66,3 +67,5 @@ chmod o+w /home/myuser/iorec | chmod o+w /home/myuser/cpurec
 touch /home/myuser/inoderec | touch /home/myuser/itemp
 chmod o+w /home/myuser/inoderec | chmod o+w /home/myuser/itemp
 
+touch ssrec
+chmod o+w ssrec

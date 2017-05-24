@@ -9,7 +9,7 @@ echo "<html>"
 echo "<head></head>"
 echo "<body><table border=1 width=100%>"
 
-echo "<h3>inodes</h3>"
+echo "<h3>inodes(df -i)</h3>"
 
 cat /home/myuser/inoderec | while IFS=' ' read -r -a arr; do
 	echo "<tr>"

@@ -9,7 +9,7 @@ grep -v "/sys" /home/myuser/dfrec > /home/myuser/temp && cp /home/myuser/temp /h
 echo "<html>"
 echo "<head></head>"
 echo "<body><table border=1 width=100%>"
-echo "<h3>df</h3>"
+echo "<h3>File system disk space usage (df)</h3>"
 
 cat /home/myuser/dfrec | while IFS=' ' read -r -a arr; do
 	echo "<tr>"
