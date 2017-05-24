@@ -53,11 +53,14 @@ sudo cp iostPeriodic.sh /home/myuser/
 sudo cp cpuLoad.sh /home/myuser/
 sudo cp iostat.sh /home/myuser/
 sudo cp loadavg.sh /home/myuser/
+sudo cp df.sh /home/myuser/
 
 chown myuser /home/myuser/iostat.sh | chown myuser /home/myuser/loadavg.sh
-chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/iostPeriodic.sh
+chown myuser /home/myuser/cpuLoad.sh | chown myuser /home/myuser/df.sh
 
 touch /home/myuser/iorec | touch /home/myuser/cpurec
+touch /home/myuser/dfrec | touch /home/myuser/temp
+chmod o+w /home/myuser/dfrec | chmod o+w /home/myuser/temp
 chmod o+w /home/myuser/iorec | chmod o+w /home/myuser/cpurec
 #crontab -l -u myuser | cat /home/myuser/cronn | crontab -u myuser -
 
