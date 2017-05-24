@@ -10,8 +10,8 @@ $client = $hdr['X-Real-IP'].":".$hdr['X-Real-Port'];
 $redirc = $_SERVER['REMOTE_ADDR'].":".$_SERVER['REMOTE_PORT'];
 
 echo "<tr><td> nginx:</td><td>" .$proxys. "</td></tr><br>";
-echo "<tr><td>client (nginx side):</td><td>".$client."</td></tr><br>";
-echo "<tr><td>client (apache side):</td> <td>".$redirc."</td></tr><br>";
+echo "<tr><td>Nginx side:</td><td>".$client."</td></tr><br>";
+echo "<tr><td>Apache side:</td> <td>".$redirc."</td></tr><br>";
 
 echo system("/./home/myuser/loadavg.sh");
 echo system("/./home/myuser/iostat.sh");
