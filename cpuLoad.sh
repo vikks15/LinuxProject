@@ -23,8 +23,4 @@ cat /home/myuser/cpurec | tail -n 4 | tail -n +3 | head -n 1 | while IFS=' ' rea
 	echo " <th> ${arr[2]} </th> <th>${arr[3]}</th> <th>${arr[5]}</th>"
 	done
 
-echo "</tr>"
-
-
-echo "</body>"
-echo "</html>"
+echo "</tr></table></body></html>"
